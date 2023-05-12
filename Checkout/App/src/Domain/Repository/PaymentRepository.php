@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Domain\Api;
+namespace App\Domain\Repository;
 
 use App\Domain\PaymentMethod;
 
-interface PaymentApiInterface
+interface PaymentRepository
 {
     public function getPaymentMethod(string $externalPaymentMethodId): PaymentMethod;
 }

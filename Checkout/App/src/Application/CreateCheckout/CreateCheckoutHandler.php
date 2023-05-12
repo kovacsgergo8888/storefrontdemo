@@ -2,12 +2,10 @@
 
 namespace App\Application\CreateCheckout;
 
-use App\Domain\Api\CartApiInterface;
 use App\Domain\Checkout;
 use App\Domain\CheckoutRepositoryInterface;
 use App\Domain\CheckoutStatus;
-use App\Domain\Customer;
-use App\Domain\Shared\EntityId;
+use App\Domain\Repository\CartRepository;
 use App\Domain\Shared\EntityIdGeneratorInterface;
 
 class CreateCheckoutHandler
@@ -15,7 +13,7 @@ class CreateCheckoutHandler
     public function __construct(
         private EntityIdGeneratorInterface $entityIdGenerator,
         private CheckoutRepositoryInterface $checkoutRepository,
-        private CartApiInterface $cartApi
+        private CartRepository $cartApi
     ) {
     }
 

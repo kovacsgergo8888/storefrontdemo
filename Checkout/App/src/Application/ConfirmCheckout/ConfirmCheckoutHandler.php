@@ -22,8 +22,13 @@ class ConfirmCheckoutHandler
             throw new ApplicationException('checkout not found');
         }
 
+        // todo validate checkout
+        // todo check stored data with other services
+
         $checkout->setCheckoutStatus(CheckoutStatus::Completed);
         $this->checkoutRepository->updateCheckout($checkout);
+
+        // todo get payment url response for checkout
 
         return $checkout;
     }

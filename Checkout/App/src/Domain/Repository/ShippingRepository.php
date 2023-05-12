@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Domain\Api;
+namespace App\Domain\Repository;
 
 use App\Domain\ShippingMethod;
 
-interface ShippingApiInterface
+interface ShippingRepository
 {
     public function getShippingMethod(string $externalShippingMethodId): ShippingMethod;
 }

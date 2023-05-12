@@ -2,13 +2,13 @@
 
 namespace App\Infrastructure\Adapter\CartApi;
 
-use App\Domain\Api\CartApiInterface;
 use App\Domain\Cart;
 use App\Domain\CartItem;
+use App\Domain\Repository\CartRepository;
 use App\Domain\Shared\EntityIdGeneratorInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-class CartApi implements CartApiInterface
+class CartApi implements CartRepository
 {
 
 

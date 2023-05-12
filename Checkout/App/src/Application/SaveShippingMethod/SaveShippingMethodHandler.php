@@ -3,16 +3,16 @@
 namespace App\Application\SaveShippingMethod;
 
 use App\Application\Exception\ApplicationException;
-use App\Domain\Api\ShippingApiInterface;
 use App\Domain\Checkout;
 use App\Domain\CheckoutRepositoryInterface;
+use App\Domain\Repository\ShippingRepository;
 use App\Domain\Shared\EntityId;
 
 class SaveShippingMethodHandler
 {
     public function __construct(
         private CheckoutRepositoryInterface $checkoutRepository,
-        private ShippingApiInterface $shippingApi
+        private ShippingRepository $shippingApi
     ){}
 
     public function __invoke(SaveShippingMethodCommand $command): Checkout

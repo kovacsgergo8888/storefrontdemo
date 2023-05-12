@@ -3,12 +3,12 @@
 namespace App\Infrastructure\Adapter\PaymentApi;
 
 
-use App\Domain\Api\PaymentApiInterface;
 use App\Domain\PaymentMethod;
+use App\Domain\Repository\PaymentRepository;
 use App\Domain\Shared\EntityIdGeneratorInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-class PaymentApi implements PaymentApiInterface
+class PaymentApi implements PaymentRepository
 {
     public function __construct(
         private HttpClientInterface $client,

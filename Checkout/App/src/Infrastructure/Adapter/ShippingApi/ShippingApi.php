@@ -2,12 +2,12 @@
 
 namespace App\Infrastructure\Adapter\ShippingApi;
 
-use App\Domain\Api\ShippingApiInterface;
+use App\Domain\Repository\ShippingRepository;
 use App\Domain\Shared\EntityIdGeneratorInterface;
 use App\Domain\ShippingMethod;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-class ShippingApi implements ShippingApiInterface
+class ShippingApi implements ShippingRepository
 {
 
     public function __construct(
